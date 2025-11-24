@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bahan Bangunan - Toko Sentral</title>
+
+    <style>
+        /* ========== NAVBAR ========== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+            padding: 15px 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .logo {
+            font-size: 16px;
+            font-weight: bold;
+            max-width: 60%;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .nav-links a.active {
+            color: #0b7dda;
+            font-weight: bold;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+
+
+        /* ========== BAGIAN BAHAN BANGUNAN ========== */
+        .bahan-bangunan-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .bahan-bangunan-section h1 {
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+
+        .bahan-bangunan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 10px;
+        }
+
+        /* CARD */
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            text-align: center;
+            padding-bottom: 15px;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* GAMBAR BESAR */
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover; /* supaya tidak gepeng */
+            border-bottom: 3px solid #eee;
+            display: block;
+        }
+
+        /* TEKS */
+        .card h3 {
+            margin: 10px 0 5px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+
+
+        /* ========== KONTAK ========== */
+        .kontak-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .kontak-section .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #0b7dda;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+
+
+        /* ========== RESPONSIVE (HP) ========== */
+        @media (max-width: 768px) {
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: white;
+                position: absolute;
+                top: 65px;
+                right: 20px;
+                padding: 15px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                border-radius: 10px;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .logo {
+                max-width: 70%;
+                font-size: 14px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            TOKO SENTRAL PLAFON PVC & BAHAN BANGUNAN
+        </div>
+
+        <nav id="menu" class="nav-links">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#produk">Produk</a>
+            <a href="bahan_bangunan.html" class="active">Bahan Bangunan</a>
+            <a href="index.html#kontak">Kontak</a>
+        </nav>
+
+        <div class="menu-btn" id="menuBtn">☰</div>
+    </header>
+
+
+
+    <!-- BAGIAN BAHAN BANGUNAN -->
+    <section id="bahan-bangunan" class="bahan-bangunan-section">
+        <h1>Bahan Bangunan</h1>
+
+        <div class="bahan-bangunan-grid">
+
+            <div class="card"><img src="images/bahan_bangunan1.jpg"><h3>Plafon Premium</h3><p>Motif marmer elegan.</p></div>
+            <div class="card"><img src="images/bahan_bangunan2.jpg"><h3>Tehel Marmer</h3><p>Kualitas premium.</p></div>
+            <div class="card"><img src="images/bahan_bangunan3.jpg"><h3>Plafon Motif</h3><p>Tampilan natural modern.</p></div>
+            <div class="card"><img src="images/bahan_bangunan4.jpg"><h3>Plafon Premium</h3><p>Motif elegan.</p></div>
+            <div class="card"><img src="images/bahan_bangunan5.jpg"><h3>Dextone</h3><p>Bahan bangunan kuat.</p></div>
+            <div class="card"><img src="images/bahan_bangunan6.jpg"><h3>Lem Korea</h3><p>Lem serbaguna premium.</p></div>
+            <div class="card"><img src="images/bahan_bangunan7.jpg"><h3>VSM Paku Dinding</h3><p>Paku bahan bangunan.</p></div>
+            <div class="card"><img src="images/bahan_bangunan8.jpg"><h3>Hardened Steel</h3><p>Material kuat.</p></div>
+            <div class="card"><img src="images/bahan_bangunan9.jpg"><h3>HP Hampton</h3><p>Peralatan bangunan.</p></div>
+            <div class="card"><img src="images/bahan_bangunan10.jpg"><h3>Plafon Premium</h3><p>Motif marmer.</p></div>
+            <div class="card"><img src="images/bahan_bangunan11.jpg"><h3>Plafon Glossy</h3><p>Mengkilap eksklusif.</p></div>
+            <div class="card"><img src="images/bahan_bangunan12.jpg"><h3>Plafon Motif Kayu</h3><p>Natural modern.</p></div>
+            <div class="card"><img src="images/bahan_bangunan13.jpg"><h3>Plafon Glossy</h3><p>Kualitas premium.</p></div>
+
+        </div>
+    </section>
+
+
+
+    <!-- KONTAK -->
+    <section id="kontak" class="kontak-section">
+        <h2>Hubungi Kami</h2>
+        <p>Alamat : RW.01/RT.003 Kel. Bonggoea, Kec. Wua-Wua, Kota Kendari, Prov. Sultra</p>
+        <p>Untuk pemesanan dan konsultasi silakan hubungi:</p>
+        <a class="btn" href="https://wa.me/6282319999741" target="_blank">WhatsApp Sekarang</a>
+    </section>
+
+
+
+    <!-- SCRIPT MENU HP -->
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const menu = document.getElementById("menu");
+
+        menuBtn.addEventListener("click", () => {
+            menu.classList.toggle("show");
+        });
+    </script>
+
+</body>
+</html>
